@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>741</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="formLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>761</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_1">
+       <property name="text">
+        <string>Nama Resep:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="nama_input"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Kategori:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Tingkat Kesulitan:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QComboBox" name="kesulitan_input">
+       <item>
+        <property name="text">
+         <string>-- Select --</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Mudah</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Sedang</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Sulit</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Alat dan Bahan</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QTextEdit" name="bahan_input"/>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>Catatan/Cara Pembuatan</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QTextEdit" name="catatan_input"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Tanggal Pembuatan</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="tanggal_input"/>
+     </item>
+     <item row="1" column="1">
+      <widget class="QComboBox" name="kategori_input">
+       <item>
+        <property name="text">
+         <string>-- Select --</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Gorengan</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Sayuran</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Panggang/Bakar</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Tumis</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Makanan Berat</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Minuman</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Seafood</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Snack</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="tambah_btn">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>320</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	font: 8pt &quot;Arial Rounded MT Bold&quot;;
+    background-color: #1E90FF;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+QPushButton:hover {
+    background-color: #B0C4DE;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Tambah Resep</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ekspor_btn">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>320</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	font: 8pt &quot;Arial Rounded MT Bold&quot;;
+    background-color: #3CB371;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+QPushButton:hover {
+    background-color: #8FBC8F;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Ekspor ke CSV</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="table">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>370</y>
+      <width>761</width>
+      <height>192</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTableWidget {
+    color: 2e2e2e; 
+    font-size: 8pt;
+}
+QHeaderView::section {
+    color: #ffffff;
+    background-color: #A2D2FF;
+    font-weight: bold;
+}
+</string>
+    </property>
+    <column>
+     <property name="text">
+      <string>Nama</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Kategori</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Tanggal</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Kesulitan</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Bahan</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Catatan</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>640</y>
+      <width>241</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>NAMA: QHAULAN SYAQHILA</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>660</y>
+      <width>241</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>NIM: F1D022152</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="hapus_btn">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>320</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	font: 8pt &quot;Arial Rounded MT Bold&quot;;
+    background-color: #EDC70A;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+QPushButton:hover {
+    background-color: #F4E960;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Hapus Resep</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionHelp"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionHapus_Resep">
+   <property name="text">
+    <string>Hapus Resep</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
